@@ -17,3 +17,6 @@ Some hand-written Demo in JavaScript.
 
 ## 对象
 - 实现一个 new 操作
+
+## Promise
+- 简易Promise 与 Promise
