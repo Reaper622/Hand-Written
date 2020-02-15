@@ -25,3 +25,6 @@ Some hand-written Demo in JavaScript.
 
 ## Node
 - EventEmitter (on | once | emit | clear)
+
+## MVVM
+- Proxy 实现简易双向绑定

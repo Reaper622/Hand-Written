@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="input" type="text" placeholder="输入数据" />
+    <p id="content"></p>
+    <script>
+        const input = document.getElementById('input');
+        const content = document.getElementById('content');
+
+        let data = {};
+
+        let proxy = new Proxy(data, {
+            get: function(target, key, recevier) {
+                console.log(recevier);
+                console.log(`get ${key}`);
+                return Reflect.get(target, key, recevier);
+            },
+            set: function(target, key, value, recevier) {
+                console.log(`set ${key} to ${value}`);
+                // 监听value变化 如果发生变化 就触发更新
+                if(key === 'value') {
+                    input.value = value;
+                    content.innerHTML = value;
+                }
+                return Reflect.set(target, key, value, recevier);
+            }
+        })
+
+        input.addEventListener('keyup', function(e) {
+            proxy.value = e.target.value;
+        })
+    </script>
+</body>
+</html>
