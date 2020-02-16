@@ -28,3 +28,6 @@ Some hand-written Demo in JavaScript.
 
 ## MVVM
 - Proxy 实现简易双向绑定
+
+## Babel
+- 实现简易Babel转换箭头函数为函数声明
