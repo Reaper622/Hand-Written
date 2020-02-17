@@ -19,6 +19,7 @@ Some hand-written Demo in JavaScript.
 
 ## 对象
 - 实现一个 new 操作
+- 实现简易版 instanceOf
 
 ## Promise
 - 简易Promise 与 Promise
