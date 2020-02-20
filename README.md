@@ -3,7 +3,6 @@ Some hand-written Demo in JavaScript.
 
 
 
-
 ## 数组
 - 使用reduce实现map
 - 使用reduce实现filter
@@ -32,3 +31,6 @@ Some hand-written Demo in JavaScript.
 
 ## Babel
 - 实现简易Babel转换箭头函数为函数声明
+
+# Ajax
+- 手动实现JSONP(Promise版)
