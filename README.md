@@ -15,10 +15,12 @@ Some hand-written Demo in JavaScript.
 - 函数柯里化
 - 防抖 debouncing
 - 节流 throttling
+- 函数compose
 
 ## 对象
 - 实现一个 new 操作
 - 实现简易版 instanceOf
+- 对象展开flatten
 
 ## Promise
 - 简易Promise 与 Promise
