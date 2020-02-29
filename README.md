@@ -17,6 +17,7 @@ Some hand-written Demo in JavaScript.
 - 节流 throttling
 - 函数compose
 - 多种方法实现 Sleep函数
+- 高阶函数HOC
 
 ## 对象
 - 实现一个 new 操作
