@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>万条数据渲染</title>
+</head>
+<body>
+    <ul></ul>
+    <script>
+        setTimeout(() => {
+            // 十万条数据
+            const infoTotal = 10000;
+            // 设置插入窗口 一次插入20条
+            const infoOnce = 20;
+            // 获得渲染数据的次数
+            const times = infoTotal / infoOnce;
+            // 渲染计数
+            let countOfRender = 0;
+            const ul = document.querySelector('ul');
+            function addLi() {
+                // 使用Fragment，避免频繁插入导致重复回流
+                let fragment = document.createDocumentFragment();
+                for(let i = 0; i < infoOnce; i++) {
+                    let li = document.createElement('li');
+                    li.innerText = Math.floor((Math.random() * 11));
+                    fragment.appendChild(li);
+                }
+                ul.appendChild(fragment);
+                countOfRender++;
+                loopAppend();
+            }
+            // 循环插入 使用rAF 优化
+            function loopAppend() {
+                if (countOfRender < times) {
+                    window.requestAnimationFrame(addLi);
+                }
+            }
+            loopAppend();
+        }, 0)
+    </script>
+</body>
+</html>

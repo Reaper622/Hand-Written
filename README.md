@@ -36,5 +36,8 @@ Some hand-written Demo in JavaScript.
 ## Babel
 - 实现简易Babel转换箭头函数为函数声明
 
-# Ajax
+## Ajax
 - 手动实现JSONP(Promise版)
+
+## Performance
+- 上万条数据的优化渲染 (Fragment，requestAnimationFrame)
